@@ -1,0 +1,20 @@
+!!! 5
+%html
+  %head
+    %title 
+      Bootstrap Wysihtml5 with Custom Image Insert
+    %script{:src => '//code.jquery.com/jquery-1.8.2.min.js' }
+    %script{:src => "//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js" }
+    %link{:href => "//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css", :rel=>"stylesheet"}
+
+  %body
+    .row.navbar.navbar-fixed-top
+      .navbar-inner
+        .container
+          %a.brand{:href => '#'}
+            rcode5 bootstrap-wysiwyg with custom image dialog
+        .container
+          - if @error
+            .alert.alert-error #{@error}
+    .row
+      = yield
