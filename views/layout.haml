@@ -3,9 +3,17 @@
   %head
     %title 
       Bootstrap Wysihtml5 with Custom Image Insert
+    %script{:src => '//cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.2/underscore-min.js' }
     %script{:src => '//code.jquery.com/jquery-1.8.2.min.js' }
     %script{:src => "//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/js/bootstrap.min.js" }
+
+    %script{:src => "bootstrap-wysihtml5/wysihtml5-0.3.0.min.js"}
+    %script{:src => "bootstrap-wysihtml5/bootstrap-wysihtml5-0.0.2.js"}
+    %script{:src => "custom_image_wysihtml5.js"}
+
     %link{:href => "//netdna.bootstrapcdn.com/twitter-bootstrap/2.2.1/css/bootstrap-combined.min.css", :rel=>"stylesheet"}
+    %link{:href => "app.css", :rel=>"stylesheet"}
+    %link{:href => "bootstrap-wysihtml5/bootstrap-wysihtml5-0.0.2.css", :rel=>"stylesheet"}
 
   %body
     .row.navbar.navbar-fixed-top
@@ -16,5 +24,5 @@
         .container
           - if @error
             .alert.alert-error #{@error}
-    .row
+    .main
       = yield

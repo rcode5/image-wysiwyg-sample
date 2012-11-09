@@ -1,7 +1,8 @@
 # dev hint: shotgun login.rb
-
+require 'json'
 require 'rubygems'
 require 'sinatra'
+require 'haml'
 
 configure do
   set :public_folder, Proc.new { File.join(root, "static") }
@@ -23,7 +24,19 @@ before '/secure/*' do
 end
 
 get '/' do
-  haml
+  haml :index
+end
+
+get '/attachable_images' do
+  # json endpoint to return your image data
+  content_type :json
+  images = 5.times.map do |x|
+    ht = (x + 5) * 10
+    { file: "http://placehold.it/#{ht}x#{ht}",
+      caption: "The image height is #{ht}"
+    }
+  end
+  images.to_json
 end
 
 get '/login/form' do 
