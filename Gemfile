@@ -4,6 +4,7 @@ gem "sinatra"
 gem "haml"
 gem 'shotgun'
 gem 'foreman'
+gem 'heroku'
 
 
 
