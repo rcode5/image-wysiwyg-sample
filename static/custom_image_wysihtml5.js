@@ -25,9 +25,9 @@ bootWysiOverrides = {
     var chooser = insertImageModal.find('.image_chooser.images');
     /* this is the template we put in the image dialog */
     var optionTemplate = _.template(
-      "<tr><td data-type='image' data-caption='<%= caption %>' data-url='<%= file %>'>" +
-        "<img src='<%= file %>' width='50'>"+
-        "<div class='caption'><%= caption %></div>" + 
+      "<tr><td class='row' data-type='image' data-caption='<%= caption %>' data-url='<%= file %>'>" +
+        "<img class='span1' src='<%= file %>' width='50'>"+
+        "<div class='span4 caption'><%= caption %></div>" + 
         "</td></tr>");
     
     var helpers = wysiHelpers;
