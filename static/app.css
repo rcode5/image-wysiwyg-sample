@@ -7,3 +7,15 @@ textarea {
   height: 200px;
 }
 
+.footer {
+  clear:both;
+  margin-top: 20px;
+  padding-top:20px;
+  border-top: 1px dotted #ccc;
+  .logo {
+    float: right;
+    img {
+      height: 20px;
+    }
+  }
+} 

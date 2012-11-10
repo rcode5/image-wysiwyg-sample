@@ -19,9 +19,15 @@
       .navbar-inner
         .container
           %a.brand{href:'#'}
-            rcode5 bootstrap-wysiwyg with custom image dialog
+            %img{src:'rcode5_small_logo.png', title:"rcode5"}
+            bootstrap-wysiwyg with custom image dialog
         .container
           - if @error
             .alert.alert-error #{@error}
     .main.container
       = yield
+    %footer.container.footer
+      .row
+        .span1.offset9
+          %a{href: 'http://rcode5.com'}
+            %img{src:'rcode5_small_logo.png', title:"rcode5"}
