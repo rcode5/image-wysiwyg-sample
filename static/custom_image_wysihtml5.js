@@ -128,8 +128,8 @@ $(function() {
     }
   };
 
-
+  $('.tip').tooltip();
   $('textarea.wysi').each(function() {
-    $(this).wysihtml5($.extend(wysiwygOptions, {html:true, color:false}));
+    $(this).wysihtml5($.extend(wysiwygOptions, {html:true, color:false, stylesheets:[]}));
   });
 });

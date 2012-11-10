@@ -1,8 +1,38 @@
 %a.github{:href => "https://github.com/rcode5/image-wysiwyg-sample"}
   %img{:style=>"position: fixed; top: 0; right: 0; border: 0; z-index:1040", :src =>"//s3.amazonaws.com/github/ribbons/forkme_right_gray_6d6d6d.png", :alt=>"Fork me on GitHub"}
 .row
-  .span1.offset1
-    Input
-  .span8
+  .span10
     %textarea.wysi
 
+.row
+  .span4
+    %p
+      %h4 about
+      This is a sample app showing how the customized image dialog could look.  Try it by focusing on the text area (so there is a cursor showing), then click the image dialog button.  Then click on an image to insert it into the editor.  The insertion template (with the caption and horiz-rule) are defined in the customized javascript.  You'll see a list of images (using http://placeholder.it images) It's pulling from a local endpoint called 
+      %code attachable_images
+      which returns a list of images as json 
+      %span.tip{ title: '{ background: "0d2150", caption: "This image is 50x50 and uses colors #6ECC43 and #0d2150", file: "http://placehold.it/50/6ECC43/0d2150", foreground: "6ECC43" }' } 
+      (hover for a sample entry).
+      The data is used to populate a Javascript template for the image dialog.
+  .span4
+    %h4 more detail/code
+    %p 
+      You can get the app from github with all the code.  You can read more about the code details at 
+      %a{href: "http://rcode5.wordpress.com/2012/11/01/custom-image-upload-modal-with-bootstrap-wysihtml5/"}
+        rcode5.
+  .span4        
+    %h4 includes/references:
+    %ul
+      %li 
+        %a{href:"http://rcode5.wordpress.com/2012/11/01/custom-image-upload-modal-with-bootstrap-wysihtml5/"} rcode5 blog post
+      %li      
+        %a{href:"http://jhollingworth.github.com/bootstrap-wysihtml5/"} bootstrap-wysihtml5
+      %li      
+        %a{href:"https://github.com/xing/wysihtml5"} wysihtml5
+      %li      
+        %a{href:"http://twitter.github.com/bootstrap/"} Twitter Bootstrap
+      %li
+        %a{href:"http://placeholder.it"} placeholder.it
+  
+
+    
