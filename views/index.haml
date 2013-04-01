@@ -14,17 +14,45 @@
       %span.tip{ title: '{ background: "0d2150", caption: "This image is 50x50 and uses colors #6ECC43 and #0d2150", file: "http://placehold.it/50/6ECC43/0d2150", foreground: "6ECC43" }' } 
       (hover for a sample entry).
       The data is used to populate a Javascript template for the image dialog.
+
+  .span4
+    %h4 use it in your app
+    %ul
+      %li Make sure your app includes the basic javascript requirements (jQuery, underscore, bootstrap-wysihtml5)
+      %li 
+        Add the bootstrap-wysihtml5 customizations and jqueryupload.js defined in this project
+        %a{:href => 'https://github.com/rcode5/image-wysiwyg-sample/blob/master/static/custom_image_wysihtml5.js'} custom_image_wysihtml5.js
+        %a{:href => 'https://github.com/rcode5/image-wysiwyg-sample/blob/master/static/jqueryupload.js'} jqueryupload.js
+      %li Build endpoint to return (by AJAX) a list of available images (like /attachable_images is defined in app.rb)
+      %li Build endpoint to handle image upload (like /upload is defined in app.rb)
+      %li You're on your way
   .span4
     %h4 more detail/code
     %p 
       You can get the app from github with all the code.  You can read more about the code details at 
       %a{href: "http://rcode5.wordpress.com/2012/11/01/custom-image-upload-modal-with-bootstrap-wysihtml5/"}
         rcode5.
+    %p 
+      This app is a simple 
+      %a{:href => 'http://sinatrarb.org'} Sinatra App.
+      If you want to run it, check out the README.md.
+      
+.row
+  .span4 
+    %h4 contributors
+    %ul
+      %li
+        %a{:href => 'https://github.com/bassjobsen'}Bass Jobsen
+        who integrated a jQuery.upload implementation so that you can upload images in the dialog.  I merged in his code from https://github.com/bassjobsen/wysihtml5-image-upload/ and added the Sinatra endpoint to fake uploads (for this demo app).
   .span4        
     %h4 references/tools:
     %ul
       %li 
         %a{href:"http://rcode5.wordpress.com/2012/11/01/custom-image-upload-modal-with-bootstrap-wysihtml5/"} blog writeup
+      %li
+        %a{href:'https://github.com/bassjobsen/wysihtml5-image-upload/'} Bass Jabsen's mods with image upload
+      %li
+        %a{href:'http://lagoscript.org/jquery/upload'} jQuery.upload (one of many implementations)
       %li      
         %a{href:"http://jhollingworth.github.com/bootstrap-wysihtml5/"} bootstrap-wysihtml5
       %li      

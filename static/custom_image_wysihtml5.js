@@ -62,6 +62,8 @@ bootWysiOverrides = {
       var $row = $(ev.currentTarget);
       insertImage($row.data());
       insertImageModal.modal('hide');
+      $('#uploadresult').html('');
+      $('#file1').val('');
     });
     
     insertImageModal.on('hide', function() {
@@ -73,6 +75,21 @@ bootWysiOverrides = {
       
       if (!activeButton) {
         insertImageModal.modal('show');
+        
+        $('#file1').change(function() {
+          $(this).uploadimage('/upload', function(res) {
+            if(res.status)
+            {
+	      chooser.append(optionTemplate({"file":res.file,"caption":res.caption}));
+	      $('#uploadresult').html('Upload successful').addClass('alert alert-success');
+	    }
+	    else
+	    {
+	      $('#uploadresult').html('Upload failed').addClass('alert alert-error');
+            }		
+          }, 'json');
+        });
+
         insertImageModal.on('click.dismiss.modal', '[data-dismiss="modal"]', function(e) {
           e.stopPropagation();
         });
@@ -116,6 +133,9 @@ $(function() {
           "<div class='modal-body'>" +
           "<div class='chooser_wrapper'>" +
           "<table class='image_chooser images'></table>" +
+          "<h4>Or Upload one to insert</h4>" +
+          "<input name=\"file\" id=\"file1\" type=\"file\">" +
+          "<div id=\"uploadresult\"></div>" +
           "</div>" +
           "</div>" +
           "<div class='modal-footer'>" +
