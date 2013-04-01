@@ -6,5 +6,6 @@ gem 'shotgun'
 gem 'foreman'
 gem 'heroku'
 
+gem 'tux' # console for sinatra
 
 
