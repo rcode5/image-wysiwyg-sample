@@ -20,8 +20,11 @@ Read more on the [rcode5 blog](http://rcode5.wordpress.com/2012/11/01/custom-ima
 
 Check the [demo app](http://wysihtml5-images.herokuapp.com/) to get more about how to use/install this feature.
 
-TODO: 
-====
+### TODOs 
 
 * Build this up as a package that is easy to integrate in your app
 
+
+### Contribute
+
+* feel free to fork this project and add/modify.  submit a pull request if you make exciting improvements.
