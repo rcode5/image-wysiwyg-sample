@@ -13,7 +13,8 @@ To see it in action,
 Or, try out the version of this code hosted on Heroku: [http://wysihtml5-images.herokuapp.com/](http://wysihtml5-images.herokuapp.com/)
 
 Many resources are pulled from CDN to keep the repo small.
-The key file, if you're trying to customize your own, is static/custom_image_wysihtml5.  That's where the magic happens.
+The key file, if you're trying to customize your own, is the [custom_image_wysihtml5.js](https://github.com/rcode5/image-wysiwyg-sample/blob/master/static/custom_image_wysihtml5.js).  That's where the magic happens.
+
 Recent updates based on code from [Bass Jobsen](https://github.com/bassjobsen) include a method of uploading an image in the dialog (leveraging jQuery.upload).  This demo app doesn't actually upload anything but fakes out the endpoint that would receive the upload.  It should be enough to show you how to do it.
 
 Read more on the [rcode5 blog](http://rcode5.wordpress.com/2012/11/01/custom-image-upload-modal-with-bootstrap-wysihtml5/) to get into the details of the code.
