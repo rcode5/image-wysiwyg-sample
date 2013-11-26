@@ -54,6 +54,7 @@ bootWysiOverrides = {
         var doc = self.editor.composer.doc;
         var tmpl = helpers.getImageTemplate();
         var chunk = tmpl(imageData);
+        self.editor.focus();
         self.editor.composer.commands.exec("insertHTML", chunk);
       }
     };
